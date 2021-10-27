@@ -1,0 +1,24 @@
+Q1
+
+DHKE is built such that we can perform key exchange over a public channel.
+However RSA is the more popular alternative for this purpose. We do not need
+a secure channel since it is hard for an attacker to guess the values of a
+and b and solve the discrete log problem, something which is not possible at
+the moment without expensive computing power and lots of time.
+
+Q2
+
+Advantage: Good against passive eavesdroppers as it is costly to solve the
+discrete log algorithm. This makes it a good solution to the problem of key
+establishment.
+
+Disadvantage: Vulnerable to MITM attack since reciever is not verified. Additionally
+if primes are not chosen properly , the generator will only have a small group
+which might make it susceptible to brute force attacks.
+
+Q3
+
+At 50 bits, cracking the key takes about 5 minutes. Since the time complexity
+is O(2^(n/2)), and extrapolating from the data from my machine, we can see that
+a value of 140 bits would take 18.61 billion years to crack. A higher value of
+512 bits would prevent cracking the key by even the most powerful supercomputers.
